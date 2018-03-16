@@ -8,8 +8,10 @@ namespace InterviewTest.Commands
 {
 	public class AnalyseHistoryCommand
 	{
-		// BONUS: What's great about readonly?
-		private readonly IAnalyser _analyser;
+        // BONUS: What's great about readonly?
+        // A readonly field can only have its value set while declaring or in a constructor, so its value is evaluated at runtime. 
+        // An attempt to set its value from any other location causes a compilation error.
+        private readonly IAnalyser _analyser;
 
 		public AnalyseHistoryCommand(IReadOnlyCollection<string> arguments)
 		{
